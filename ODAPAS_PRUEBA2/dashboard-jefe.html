@@ -1,0 +1,131 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Jefe | OPDAPAS</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard-jefe.css">
+</head>
+<body>
+    <!-- Fondo con efectos -->
+    <div class="stars"></div>
+    <div class="particles"></div>
+    <div class="energy-lines"></div>
+    
+    <!-- Contenedor principal -->
+    <div class="dashboard-container">
+        <!-- Header superior -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="logo-title">OPDAPAS</h1>
+                    <p class="logo-subtitle">Organismo Público Descentralizado para la prestación de Servicios de Agua Potable, Alcantarillado y Saneamiento del Municipio de Ixtapaluca.</p>
+                </div>
+                
+                <div class="user-section">
+                    <div class="user-info">
+                        <span class="welcome-text">BIENVENIDO</span>
+                        <span class="user-name" id="userName">Cargando...</span>
+                    </div>
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Salir
+                    </button>
+                </div>
+            </div>
+            
+            <div class="header-decoration">
+                <div class="water-drop">💧</div>
+                <div class="water-reflection"></div>
+            </div>
+        </header>
+
+        <!-- Menú lateral -->
+        <nav class="sidebar-menu">
+            <div class="menu-header">
+                <h3><i class="fas fa-bars"></i> MENÚ PRINCIPAL</h3>
+            </div>
+            <ul class="menu-list">
+                <li class="menu-item" onclick="navigateTo('inicio')">
+                    <i class="fas fa-home"></i>
+                    <span>INICIO</span>
+                </li>
+                <li class="menu-item" onclick="navigateTo('prueba-dashboard')">
+                    <i class="fas fa-chart-line"></i>
+                    <span>PRUEBA DASHBOARD</span>
+                </li>
+                <li class="menu-item" onclick="navigateTo('infogo')">
+                    <i class="fas fa-info-circle"></i>
+                    <span>INFOGO</span>
+                </li>
+                <li class="menu-item" onclick="navigateTo('dashboard')">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>DASHBOARD</span>
+                </li>
+                <li class="menu-item" onclick="navigateTo('dashboard-viejas-pipas')">
+                    <i class="fas fa-oil-can"></i>
+                    <span>DASHBOARD VIEJAS PIPAS</span>
+                </li>
+                <li class="menu-item" onclick="navigateTo('reportes-fuegos-inundaciones')">
+                    <i class="fas fa-fire"></i>
+                    <span>REPORTES FUEGOS E INUNDACIONES</span>
+                </li>
+                <li class="menu-item" onclick="navigateTo('mapas-inundaciones')">
+                    <i class="fas fa-map"></i>
+                    <span>MAPAS DE INUNDACIONES</span>
+                </li>
+                <li class="menu-item" onclick="navigateTo('mapas-carlos')">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>MAPAS CARLOS</span>
+                </li>
+            </ul>
+            
+            <div class="menu-footer">
+                <div class="system-status">
+                    <div class="status-indicator active"></div>
+                    <span>Sistema Operativo</span>
+                </div>
+                <!-- CONTENEDOR DEL CLIMA Y FECHA - MODIFICADO -->
+                <div class="weather-time-container">
+                    <div class="weather-info" id="weatherInfo">
+                        <i class="fas fa-cloud-sun weather-icon"></i>
+                        <div class="weather-details">
+                            <span class="weather-temp" id="weatherTemp">--°C</span>
+                            <span class="weather-location">Ixtapaluca, Méx</span>
+                            <span class="weather-desc" id="weatherDesc">Cargando clima...</span>
+                        </div>
+                    </div>
+                    <div class="current-time" id="currentTime"></div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2><i class="fas fa-th-large"></i> MÓDULOS DEL SISTEMA</h2>
+                <p>Seleccione un módulo para gestionar</p>
+            </div>
+            
+            <div class="modules-grid" id="modulesGrid">
+                <!-- Los módulos se cargan dinámicamente desde JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/dashboard-jefe.js"></script>
+</body>
+</html>
