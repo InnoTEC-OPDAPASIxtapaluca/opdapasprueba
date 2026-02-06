@@ -7,8 +7,8 @@ class Database {
     private $conn;
     
     // Configuración para Google Sheets API
-    private $google_sheets_api_url = "https://script.google.com/macros/s/TU_SCRIPT_ID/exec";
-    private $use_google_sheets = false; // Cambia a true para usar Google Sheets
+    private $google_sheets_api_url = "https://script.google.com/macros/s/AKfycbw7505JH6qHBZ5MrkWpK0_04Or89Rl6CDf765co-QyRI7MIUFv_xZN6CsQ6W1cXDEbSsg/exec";
+    private $use_google_sheets = true; // Cambia a true para usar Google Sheets
 
     public function getConnection() {
         if ($this->use_google_sheets) {
@@ -190,3 +190,4 @@ function loginUser($no_nomina, $password) {
     }
 }
 ?>
+
